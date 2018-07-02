@@ -1,7 +1,7 @@
 using AngularWebApp.Controllers.ApiRepository;
 using System.Threading.Tasks;
 using AngularWebApp.Models;
-
+using System.Collections.Generic;
 
 namespace AngularWebApp.Controllers.ApiLogic
 {
@@ -12,10 +12,14 @@ namespace AngularWebApp.Controllers.ApiLogic
         {
             _repo = repo;
         }
-        public Person GetAll()
+        public List<Person> GetAll()
         {
             var person = _repo.GetAll();
             return person;
+        }
+        public void Post(Person personModel)
+        {
+            _repo.Post(personModel);
         }
     }
 }
