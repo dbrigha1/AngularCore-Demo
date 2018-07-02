@@ -19,9 +19,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.0" />
   </ItemGroup>
 
-<ItemGroup>
+<!-- <ItemGroup>
   <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
-</ItemGroup>
+</ItemGroup> -->
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
