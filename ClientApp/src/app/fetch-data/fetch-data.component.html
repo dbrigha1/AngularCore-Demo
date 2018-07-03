@@ -2,7 +2,11 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!persons"><em>Loading...</em></p>
+<a name="Add Person" class="btn btn-primary" role="button" [routerLink]='["/add-person"]'>Add Person</a>
+
+<br>
+
+<p *ngIf="!persons"><em>No persons available..</em></p>
 
 <table class='table' *ngIf="persons">
   <thead>

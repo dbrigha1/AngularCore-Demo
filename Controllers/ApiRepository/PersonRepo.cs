@@ -15,14 +15,6 @@ namespace AngularWebApp.Controllers.ApiRepository
     }
         public List<Person> GetAll()
         {
-            // var person = new Person
-            // {
-            //     PersonId = 1,
-            //     DisplayName = "Dylan A Brigham",
-            //     FirstName = "Dylan",
-            //     LastName = "Brigham"
-            // };
-            // return person;
             var person = _context.Persons.Where(e=>true).ToList();
             return person;
         }
