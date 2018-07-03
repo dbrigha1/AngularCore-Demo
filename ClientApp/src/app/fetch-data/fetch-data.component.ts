@@ -8,11 +8,11 @@ import { HttpClient } from '@angular/common/http';
 
 export class FetchDataComponent {
   // public forecasts: WeatherForecast[];
-    public person: PersonData;
+    public persons: PersonData[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<PersonData>(baseUrl + 'api/Persons/PersonGet').subscribe(result => {
-      this.person = result;
+    http.get<PersonData[]>(baseUrl + 'api/Persons/Person').subscribe(result => {
+      this.persons = result;
       }, error => console.error(error));
   }
 }

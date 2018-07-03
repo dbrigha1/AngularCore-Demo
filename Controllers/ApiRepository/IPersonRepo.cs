@@ -8,5 +8,6 @@ namespace AngularWebApp.Controllers.ApiRepository
     {
          List<Person> GetAll();
          void Post(Person personModel);
+         void DeleteAll();
     }
 }

@@ -21,5 +21,9 @@ namespace AngularWebApp.Controllers.ApiLogic
         {
             _repo.Post(personModel);
         }
+        public void DeleteAll()
+        {
+            _repo.DeleteAll();
+        }
     }
 }

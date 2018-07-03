@@ -1,29 +1,26 @@
-<!-- <h1>Weather forecast</h1>
+<h1>Persons</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
+<a name="Add Person" class="btn btn-primary" role="button" [routerLink]='["/add-person"]'>Add Person</a>
 
-<table class='table' *ngIf="forecasts">
+<br>
+
+<p *ngIf="!persons"><em>No persons available..</em></p>
+
+<table class='table' *ngIf="persons">
   <thead>
     <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
+      <th>Display Name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.dateFormatted }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
+    <tr *ngFor="let person of persons">
+      <td>{{person.displayName}}</td>
+      <td>{{person.firstName}}</td>
+      <td>{{person.lastName}}</td>
     </tr>
   </tbody>
 </table>
--->
-<h1>{{person.personId}}</h1> 
-<h2>{{person.displayName}}</h2>
-<h3>{{person.firstName}}</h3>
-<h4>{{person.lastName}}</h4>
