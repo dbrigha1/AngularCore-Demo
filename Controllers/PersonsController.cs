@@ -46,5 +46,18 @@ namespace AngularWebApp.Controllers
             }
 
         }
+        [HttpDelete("[action]")]
+        public ActionResult PersonDeleteAll()
+        {
+            try
+            {
+                _logic.DeleteAll();
+                return Ok();
+            }
+            catch
+            {
+                return StatusCode(500);
+            }
+        }
     }
 }

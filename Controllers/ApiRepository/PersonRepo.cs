@@ -31,5 +31,17 @@ namespace AngularWebApp.Controllers.ApiRepository
             _context.Add(personModel);
             _context.SaveChanges();
         }
+        public void DeleteAll()
+        {
+            var persons = _context.Persons.Where(p=>true).ToList();
+
+            foreach(var person in persons)
+            {
+                var entity = _context.Persons.Find(person.PersonId);
+                _context.Remove(entity);
+            }
+            
+            _context.SaveChanges();
+        }
     }
 }

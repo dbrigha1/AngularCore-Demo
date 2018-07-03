@@ -8,5 +8,7 @@ namespace AngularWebApp.Controllers.ApiLogic
     {
          List<Person> GetAll();
          void Post(Person personModel);
+
+         void DeleteAll();
     }
 }
