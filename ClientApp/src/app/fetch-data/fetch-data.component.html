@@ -3,7 +3,7 @@
 <p>This component demonstrates fetching data from the server.</p>
 
 <a name="Add Person" class="btn btn-primary" role="button" [routerLink]='["/add-person"]'>Add Person</a>
-
+<a name="Delete All" class ="btn btn-danger" role="button" (click)="DeleteAll()">Delete All</a>
 <br>
 
 <p *ngIf="!persons"><em>No persons available..</em></p>

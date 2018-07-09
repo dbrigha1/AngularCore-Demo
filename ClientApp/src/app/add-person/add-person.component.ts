@@ -17,7 +17,6 @@ export class AddPersonComponent
 {
     _http: HttpClient;
     _baseUrl: string;
-    
 
     constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
         this._http=http;
